@@ -1,0 +1,215 @@
+//variables colors
+
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+$backgraund: #0c192c;
+
+//variables fonts
+
+$f-primary: 'Courier New', Courier, monospace;
+$f-secondaty: 'Times New Roman', Times, serif;
+$f-third: 'Gameplay';
+
+body {
+    background-color: $backgraund !important;
+
+
+    .container {
+
+        .title {
+            margin: 1rem 0;
+
+        }
+
+    }
+
+    .navbar {
+        background: transparent !important;
+        border-radius: 4px;
+        margin-top: 1rem;
+
+        .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 5%;
+
+            a {
+                color: rgb(3, 249, 3);
+                font-family: 'Courier New', Courier, monospace;
+
+                &:hover {
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+}
+
+a {
+
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: $f-primary;
+    transition: .5s ease-in-out;
+
+    &:hover {
+        color: rgb(17, 242, 17);
+    }
+}
+
+.bg-body-tertiary button span {
+    border: none;
+    background-image: url('../assets/img/rocket.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+    transition: .5s;
+    padding: 1rem;
+
+    &:hover {
+        animation: deploy 1s linear forwards;
+    }
+}
+
+.container {
+
+    .navbar-brand {
+        font-family: 'Courier New', Courier, monospace;
+
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+.container-fluid {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .start {
+
+        padding: .5rem 1rem;
+        font-family: $f-third;
+        color: rgb(12, 255, 12);
+        background-color: #630a37;
+
+        &:hover {
+            box-shadow: 0px 0px 3px 3px $green;
+        }
+
+        &:active {
+            transform: scale(0.95);
+            box-shadow: 0px 0px 3px 3px $pink;
+        }
+    }
+}
+
+h1 {
+    color: whitesmoke;
+
+}
+
+.welcome {
+
+    display: block;
+    position: absolute;
+    color: rgb(7, 255, 7);
+    font-family: $f-primary;
+    font-size: 20px;
+
+}
+
+.buttons {
+    display: flex;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    margin-top: 5%;
+    border: 1px solid white;
+    border-radius: 4px;
+
+    span {
+        margin-top: 1%;
+        margin-left: 1%;
+        border-radius: 50px;
+        display: block;
+        background-color: red;
+        width: 10px;
+        height: 10px;
+
+        &:nth-child(2) {
+
+            background-color: $yellow;
+        }
+
+        &:nth-child(3) {
+            background-color: green;
+        }
+    }
+}
+
+.container-write {
+    position: absolute;
+    margin: 10%;
+
+    span {
+        margin: auto;
+        color: rgb(0, 255, 0);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+
+    }
+
+}
+
+.containerCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15% auto;
+}
+
+.swiper {
+    width: 100%;
+    height: 50%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 650px) {
+    .buttons {
+        width: 100%;
+        height: 20%;
+    }
+
+    .container-write {
+        margin: 14%;
+    }
+}
